@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width-device-width, initial-scale=1-0" />
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="image/LOGO.jpg" class="logo" />
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-text">
+          <p>Web Designer & Developer</p>
+          <h1>
+            Hi, I'm <span>Zobayer Hossain</span><br />
+            From Bangladesh
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <!-------------about-------->
+
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="image/user.jpg" height="250" width="150" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              My name is Muhammed Zubayer Hosssain Zakir but everyone calls me
+              Zakir.I live at Roygonj in the Kurigram district. My Inistitute
+              name is Dinajpur Politechnic Inistitute. I do Web Design and
+              Development every day.I mostly like to coding with web design &
+              development.
+            </p>
+
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links active-link" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links active-link" onclick="opentab('education')">
+                Education
+              </p>
+            </div>
+
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>WD & D</span><br />Designing Web & developer</li>
+                <li><span>Web Development</span><br />Web apps Development</li>
+                <li><span>Web Design</span><br />Web create & Design</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li><span>2022-Current</span><br />European it</li>
+                <li><span>2021-Current</span><br />European it</li>
+                <li>
+                  <span>2020-2021</span><br />Dinajpur Politechnic Inistitute
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>2018-2022</span><br />Dinajpur Politechnic Inistitute
+                </li>
+                <li><span>2013-2018</span><br />Roygonj ML High school</li>
+                <li><span>2007-2012</span><br />Roygonj Primary School</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---------services--------->
+    <div id="service">
+      <div class="services">
+        <h1 class="sub-title">My Service</h1>
+        <div class="service-list">
+          <div>
+            <h2>Web Design</h2>
+            <p>Website create html,css,javascript</p>
+            <a href="#">learn more</a>
+          </div>
+
+          <div>
+            <h2>Web Developemnet</h2>
+            <p>Website developmet php,laravel</p>
+            <a href="#">learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classlist.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classlist.remove("active-tab");
+        }
+        event.currentTarget.classlist.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+  </body>
+</html>
